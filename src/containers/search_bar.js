@@ -38,19 +38,8 @@ class SearchBar extends Component{
   }
 }
 
-//to hook up action creator-fetchweather to our SearchBar-container
 function mapDispatchToProps(dispatch){
-  //action creator when called and returns an action
-  //bindActionCreators with dispatch makes sure that actions flows via
-  //middleware and reducers
   return bindActionCreators({fetchWeather},dispatch)
-  //The action is linked to the reducer by the mapDispatchToProps  function
-  // and the connect  wrapper from react-redux.
-  //The functions that we supply in the first argument of
-  // bindActionCreators  will let redux know that the
-  //return value of the functions must be sent on to all the
-  // reducers inside of the combineReducers  function in
-  //reducers/index.js.
 }
 
 export default connect(null,mapDispatchToProps)(SearchBar)
